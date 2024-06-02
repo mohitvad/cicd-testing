@@ -13,3 +13,11 @@ jobs:
                 echo "checking docker version"
                 docker version 
                 docker-compose version 
+            - name: cloning my code and run compose 
+              run: | 
+                git clone https://github.com/redashu/devops_oracle_webapp.git
+                cd devops_oracle_webapp
+                docker-compose up -d --build 
+                sleep 2
+                docker-compose ps 
+
