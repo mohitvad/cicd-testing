@@ -1,0 +1,15 @@
+# name of my pipeline 
+name: ashu python cicd pipeline
+on: 
+    push:
+        branches: ["master"]
+# steps 
+jobs: 
+    ashu-build-test:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: checking docker version 
+              run: |
+                echo "checking docker version"
+                docker version 
+                docker-compose version 
