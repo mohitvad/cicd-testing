@@ -20,4 +20,8 @@ jobs:
                 docker-compose up -d --build 
                 sleep 2
                 docker-compose ps 
+            - name: testing webapp by access it 
+              run: |
+                echo "we can use any tool to acccess web page like postman, curl , http"
+                curl -f http://localhost:5000
 
