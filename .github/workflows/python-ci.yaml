@@ -5,7 +5,7 @@ on:
         branches: ["main"]
 # jobs 
 jobs: 
-    ashu-build-test:
+    mohit-build-test:
         runs-on: ubuntu-latest
         steps: 
         # name is common keyword to definine steps 
