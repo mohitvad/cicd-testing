@@ -19,13 +19,13 @@ jobs:
                 docker-compose version 
             - name: cloning my code and run compose 
               run: | 
-                git clone https://github.com/redashu/devops_oracle_webapp.git
-                cd devops_oracle_webapp
+                git clone git@github.com:mohitvad/cicd-testing.git 
+                cd cicd-testing
                 docker-compose up -d --build 
                 sleep 2
                 docker-compose ps 
             - name: testing webapp by access it 
               run: |
                 echo "we can use any tool to acccess web page like postman, curl , http"
-                curl -f http://localhost:5000/test.html
+                curl -f http://localhost:5000/index.html
 
