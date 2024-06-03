@@ -19,7 +19,7 @@ jobs:
                 docker-compose version 
             - name: cloning my code and run compose 
               run: | 
-                git clone git@github.com:mohitvad/cicd-testing.git
+                git clone https://github.com/mohitvad/cicd-testing.git
                 cd cicd-testing
                 docker-compose up -d --build 
                 sleep 2
