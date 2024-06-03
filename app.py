@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 import os
+import subprocess
 
 app = Flask(__name__)
 
@@ -16,6 +17,13 @@ def get_db_connection():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+# app testing/ health page url 
+@app.route('/health')
+def health():
+    output1=subprocess.getoutput('whoami')
+    #print("Hi my name is ",output1)
+    return render_template('health.html')
 
 @app.route('/login', methods=['POST'])
 def login():
