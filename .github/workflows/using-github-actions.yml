@@ -2,7 +2,7 @@
 name: ashu python cicd pipeline
 on: 
     push:
-        branches: ["master"]
+        branches: ["master1"]
 # jobs 
 jobs: 
     ashu-build-test:
