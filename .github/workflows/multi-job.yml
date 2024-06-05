@@ -64,6 +64,6 @@ jobs:
               with:
                 context: . # location of dockerfile 
                 push: true
-                tags: ${{ secrets.DOCKER_USERNAME }}/ashutestapp:v1
+                tags: ${{ secrets.DOCKER_USERNAME }}/ashutestapp:${{ github.sha }}
                 # dockerashu/ashutestapp:v1 
 
