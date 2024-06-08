@@ -1,5 +1,5 @@
 # name of my pipeline 
-name: mohit python cicd pipeline
+name: mohit python cicd pipeline1
 on: 
     push:
         branches: ["main"]
