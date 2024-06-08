@@ -2,7 +2,11 @@
 name: ashu python cicd pipeline
 on: 
     push:
+<<<<<<< HEAD
         branches: ["main1"]
+=======
+        branches: ["master1"]
+>>>>>>> master
 # jobs 
 jobs: 
     mohit-build-test1:
@@ -17,6 +21,7 @@ jobs:
                 echo "checking docker version"
                 docker version 
                 docker-compose version 
+
             - name: cloning my code using github action 
               uses: actions/checkout@v4 
                
@@ -45,4 +50,5 @@ jobs:
                 context: . # location of dockerfile 
                 push: true
                 tags: ${{ secrets.DOCKER_USERNAME }}/ashutestapp:v1
+                # dockerashu/ashutestapp:v1 
 
