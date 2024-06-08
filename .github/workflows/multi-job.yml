@@ -80,3 +80,17 @@ jobs:
             kubectl version --client 
             kubectl get nodes 
 
+        - name: download artifact 
+          uses: actions/download-artifact@v4 
+          with: 
+            name: ashu-artifacts
+            path: . 
+        - name: deploy docker image in k8s 
+          run: | 
+            ls 
+            kubectl apply -f k8s-manifest
+            sleep 4
+            kubectl get deploy 
+            kubectl get pods
+            kubectl get svc 
+
