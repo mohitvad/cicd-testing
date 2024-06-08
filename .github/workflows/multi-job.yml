@@ -1,8 +1,8 @@
 # name of my pipeline 
-name: ashu python cicd pipeline
+name: mohit python cicd pipeline
 on: 
     push:
-        branches: ["master"]
+        branches: ["main"]
 # jobs 
 jobs: 
     ashu-build-test:
