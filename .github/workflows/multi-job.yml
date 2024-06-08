@@ -94,3 +94,10 @@ jobs:
             kubectl get pods
             kubectl get svc 
 
+        - name: upgrade app to latest version 
+          run: | 
+            echo "checking existing deploy and pods"
+            kubectl get deploy,pod
+            echo "updating latest docker image to running deployment"
+            kubectl set image deployment ashu-web ashutestapp=${{ secrets.DOCKER_USERNAME }}/ashutestapp:appv${{ github.sha }}
+
