@@ -69,3 +69,14 @@ jobs:
                 tags: ${{ secrets.DOCKER_USERNAME }}/ashutestapp:appv${{ github.sha }}
                 # dockerashu/ashutestapp:v1 
 
+    ashu-deploy-k8s:
+      needs: ashu-final-build-push
+      runs-on: self-hosted
+      steps:
+        - name: checking docker and k8s access
+          run: |
+            whoami
+            docker version 
+            kubectl version --client 
+            kubectl get nodes 
+
